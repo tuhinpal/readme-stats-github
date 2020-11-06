@@ -1,0 +1,12 @@
+{
+    "name": "github-stats",
+    "version": "1.0.0",
+    "description": "Github Stats Experimental",
+    "main": "api/index.js",
+    "dependencies": {
+        "axios": "^0.21.0",
+        "node-base64-image": "^2.0.1"
+    },
+    "author": "Tuhin Kanti Pal",
+    "license": "Apache-2.0"
+}
