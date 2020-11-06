@@ -5,6 +5,8 @@ const token = [process.env.GH_TOKEN_ONE, process.env.GH_TOKEN_TWO, process.env.G
 async function repoD(username) {
     var ghd = await BASICfetch(username);
     var repo_info = await ISF(username, Math.ceil(ghd.public_repos / 100));
+    var tiss = Number(await FIssues(username)) - Number(repo_info.total_opened_issues);
+    if (tiss < 0) var tiss = 0;
     if (ghd.login == undefined) {
         return ghd;
     } else {
@@ -23,7 +25,7 @@ async function repoD(username) {
             total_stars: format(repo_info.total_stars),
             total_forks: format(repo_info.total_forks),
             total_issues: format(await FIssues(username)),
-            total_closed_issues: format(Number(await FIssues(username)) - Number(repo_info.total_opened_issues)),
+            total_closed_issues: format(tiss),
             total_commits: format(await Fcommit(username))
         });
         return output;
