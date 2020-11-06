@@ -1,12 +1,23 @@
 {
-    "name": "github-stats",
+    "name": "readme-stats-github",
     "version": "1.0.0",
-    "description": "Github Stats Experimental",
+    "description": "Generate your GitHub's Stats in SVG",
     "main": "api/index.js",
     "dependencies": {
         "axios": "^0.21.0",
         "node-base64-image": "^2.0.1"
     },
     "author": "Tuhin Kanti Pal",
-    "license": "Apache-2.0"
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/cachecleanerjeet/readme-stats-github.git"
+    },
+    "keywords": [
+        "github-readme-stats"
+    ],
+    "bugs": {
+        "url": "https://github.com/cachecleanerjeet/readme-stats-github/issues"
+    },
+    "homepage": "https://github.com/cachecleanerjeet/readme-stats-github#readme"
 }
