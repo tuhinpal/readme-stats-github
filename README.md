@@ -43,4 +43,4 @@ No, Anurag Da is Pro.
 ### Want to contact ?
 - [Mail](mailto:me@thetuhin.com "Mail")
 - [Telegram](http://telegram.dog/cachecleanerjeet "Telegram")
-- [Telegram Channel](http://telegram.dog/t-projects "Telegram Channel")
+- [Telegram Channel](http://telegram.dog/tprojects "Telegram Channel")
