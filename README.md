@@ -37,9 +37,6 @@ This project still in Alpha Stage, there will many features to come.
 ### Contribution
 Contributors are welcome
 
-### Is that a competition for  [github-readme-stats](https://github.com/anuraghazra/github-readme-stats "github-readme-stats") ?
-No, Anurag Da is Pro.
-
 ### Want to contact ?
 - [Mail](mailto:me@thetuhin.com "Mail")
 - [Telegram](http://telegram.dog/cachecleanerjeet "Telegram")
