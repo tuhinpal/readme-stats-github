@@ -1,4 +1,4 @@
-async function main(name, pic, repo, stars, commits, forks, tis, cis, text_color, card_color, icon_color, followers) {
+async function main(name, pic, repo, stars, commits, forks, tis, cis, text_color, card_color, icon_color, followers, stroke) {
 
     var card = `<svg width="495" height="195" viewBox="0 0 495 195" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <style>
@@ -60,7 +60,7 @@ async function main(name, pic, repo, stars, commits, forks, tis, cis, text_color
             }
         }
     </style>
-    <rect x="0.5" y="0.5" rx="4.5" height="99%" width="494" fill="#${card_color}" stroke="none" stroke-opacity="1" />
+    <rect x="0.5" y="0.5" rx="4.5" height="99%" width="494" fill="#${card_color}" stroke="{stroke}" stroke-opacity="1" />
 
     <g transform="translate(0, 25)">
 
