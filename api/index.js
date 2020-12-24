@@ -6,6 +6,7 @@ module.exports = (req, res) => {
     var cc = req.query.cc;
     var tc = req.query.tc;
     var ic = req.query.ic;
+    var stroke = req.query.stroke;
 
     if (username == undefined) {
         res.json("Username is required") // If username is undefined
@@ -14,11 +15,10 @@ module.exports = (req, res) => {
         if (cc == undefined) var cc = 'fff';
         if (tc == undefined) var tc = '000';
         if (ic == undefined) var ic = 'FF0000';
-        var stroke = req.query.stroke;
         if (stroke == undefined || stroke == 'none') {
             var stroke = 'none'
         } else {
-            var stroke = `#`
+            var _stroke = `#${stroke}`
         };
 
         async function call(username) {
@@ -41,7 +41,7 @@ module.exports = (req, res) => {
                                          cc,
                                          ic,
                                          stats.followers,
-                                         stroke))
+                                         _stroke))
             };
         };
         call(username);
