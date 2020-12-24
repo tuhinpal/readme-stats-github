@@ -14,6 +14,12 @@ module.exports = (req, res) => {
         if (cc == undefined) var cc = 'fff';
         if (tc == undefined) var tc = '000';
         if (ic == undefined) var ic = 'FF0000';
+        var stroke = req.query.stroke;
+        if (stroke == undefined || stroke == 'none') {
+            var stroke = 'none'
+        } else {
+            var stroke = `#`
+        };
 
         async function call(username) {
             var stats = await fetcher.repoD(username);
@@ -23,7 +29,19 @@ module.exports = (req, res) => {
             } else {
                 res.setHeader("Content-Type", "image/svg+xml");
                 res.setHeader("Cache-Control", "s-maxage=700, stale-while-revalidate");
-                res.send(await card.main(stats.name, stats.pic, stats.public_repos, stats.total_stars, stats.total_commits, stats.total_forks, stats.total_issues, stats.total_closed_issues, tc, cc, ic, stats.followers))
+                res.send(await card.main(stats.name,
+                                         stats.pic,
+                                         stats.public_repos,
+                                         stats.total_stars,
+                                         stats.total_commits,
+                                         stats.total_forks,
+                                         stats.total_issues,
+                                         stats.total_closed_issues,
+                                         tc,
+                                         cc,
+                                         ic,
+                                         stats.followers,
+                                         stroke))
             };
         };
         call(username);
