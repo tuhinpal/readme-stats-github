@@ -60,7 +60,7 @@ async function main(name, pic, repo, stars, commits, forks, tis, cis, text_color
             }
         }
     </style>
-    <rect x="0.5" y="0.5" rx="4.5" height="99%" width="494" fill="#${card_color}" stroke="#7e7979" stroke-opacity="1" />
+    <rect x="0.5" y="0.5" rx="4.5" height="99%" width="494" fill="#${card_color}" stroke="none" stroke-opacity="1" />
 
     <g transform="translate(0, 25)">
 
