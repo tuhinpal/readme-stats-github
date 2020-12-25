@@ -18,11 +18,12 @@ https://github-stats-alpha.vercel.app/api/?username=cachecleanerjeet
 Customization:
 
 ```
-https://github-stats-alpha.vercel.app/api/?username=cachecleanerjeet&cc=000&tc=fff&ic=fff
+https://github-stats-alpha.vercel.app/api/?username=cachecleanerjeet&cc=000&tc=fff&ic=fff&bc=000
 
 Where cc = Card Color
       tc = Text Color
       ic = Icon Color
+      bc = Border Color
 ```
 
 [![Example](https://github-stats-alpha.vercel.app/api/?username=cachecleanerjeet "Example")](https://github.com/cachecleanerjeet/readme-stats-github "Example")
