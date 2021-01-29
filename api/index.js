@@ -1,7 +1,7 @@
 const fetcher = require("../helper/fetcher");
 const card = require("../template/card");
 
-module.exports = (req, res) => {
+module.exports = async(req, res) => {
     const username = req.query.username;
     var cc = req.query.cc;
     var tc = req.query.tc;
@@ -17,17 +17,14 @@ module.exports = (req, res) => {
         if (ic == undefined) var ic = 'FF0000';
         if (bc == undefined) var bc = '7e7979';
 
-        async function call(username) {
-            var stats = await fetcher.repoD(username);
-            if (stats.username == undefined) {
-                res.setHeader("Cache-Control", "s-maxage=3600, stale-while-revalidate");
-                res.json("Sorry user not found")
-            } else {
-                res.setHeader("Content-Type", "image/svg+xml");
-                res.setHeader("Cache-Control", "s-maxage=700, stale-while-revalidate");
-                res.send(await card.main(stats.name, stats.pic, stats.public_repos, stats.total_stars, stats.total_commits, stats.total_forks, stats.total_issues, stats.total_closed_issues, tc, cc, ic, stats.followers, bc))
-            };
+        var stats = await fetcher.repoD(username);
+        if (stats.username == undefined) {
+            res.setHeader("Cache-Control", "s-maxage=3600, stale-while-revalidate");
+            res.json("Sorry user not found")
+        } else {
+            res.setHeader("Content-Type", "image/svg+xml");
+            res.setHeader("Cache-Control", "s-maxage=700, stale-while-revalidate");
+            res.send(await card.main(stats.name, stats.pic, stats.public_repos, stats.total_stars, stats.total_commits, stats.total_forks, stats.total_issues, stats.total_closed_issues, tc, cc, ic, stats.followers, bc))
         };
-        call(username);
     }
 }

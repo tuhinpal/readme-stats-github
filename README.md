@@ -4,7 +4,6 @@
 - Totally accurate result
 - Refresh result in 700 seconds
 - Support customization
-- More features coming very soon
 
 ### Endpoints
 
@@ -33,8 +32,7 @@ Where cc = Card Color
 - Thanks to [SpecHide](https://github.com/SpEcHiDe "SpecHide") for many helps
 
 ### Note
-This project still in Alpha Stage, there will many features to come.
-
+Due to almost no contribution from community, this project will not be maintained for now.
 ### Contribution
 Contributors are welcome
 

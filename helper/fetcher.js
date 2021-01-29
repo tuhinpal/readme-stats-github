@@ -46,22 +46,20 @@ async function ISF(username, totalpage) {
         tforks += rt.total_forks;
         toissues += rt.total_opened_issues;
     });
-    var ifs = ({
+    return ({
         total_stars: tstars,
         total_forks: tforks,
         total_opened_issues: toissues
     });
-    return ifs;
 };
 
 // Fetch Basic Details
 async function BASICfetch(username) {
-    var basicconfig = {
-        method: "get",
-        url: "https://api.github.com/users/" + username,
-        headers: { "User-Agent": "Tuhin", "Authorization": "Bearer " + token[Math.floor(Math.random() * 3)] }
-    };
-    return axios(basicconfig)
+    return axios({
+            method: "get",
+            url: "https://api.github.com/users/" + username,
+            headers: { "User-Agent": "Tuhin", "Authorization": "Bearer " + token[Math.floor(Math.random() * 3)] }
+        })
         .then(function(response) {
             return response.data;
         })
@@ -72,13 +70,11 @@ async function BASICfetch(username) {
 
 // Fetch Repo Page
 async function fetchRD(username, pageno) {
-
-    var fetchRDco = {
-        method: "get",
-        url: "https://api.github.com/users/" + username + "/repos?per_page=100&page=" + pageno,
-        headers: { "User-Agent": "Tuhin", "Authorization": "Bearer " + token[Math.floor(Math.random() * 3)] }
-    };
-    return axios(fetchRDco)
+    return axios({
+            method: "get",
+            url: "https://api.github.com/users/" + username + "/repos?per_page=100&page=" + pageno,
+            headers: { "User-Agent": "Tuhin", "Authorization": "Bearer " + token[Math.floor(Math.random() * 3)] }
+        })
         .then(function(resp) {
             var tstars = 0;
             var tforks = 0;
@@ -89,12 +85,11 @@ async function fetchRD(username, pageno) {
                 tforks += rt.forks_count;
                 toissues += rt.open_issues;
             });
-            var sisf = ({
+            return ({
                 total_stars: tstars,
                 total_forks: tforks,
                 total_opened_issues: toissues
             });
-            return sisf;
         })
         .catch(function(err) {
             return "Sorry that's an " + err
@@ -103,16 +98,15 @@ async function fetchRD(username, pageno) {
 
 // Fetch Total Commit
 async function Fcommit(username) {
-    var commitF = {
-        method: 'get',
-        url: 'https://api.github.com/search/commits?per_page=1&q=author:' + username,
-        headers: {
-            'Accept': 'application/vnd.github.cloak-preview',
-            'Content-Type': 'application/json',
-            "Authorization": "Bearer " + token[Math.floor(Math.random() * 3)]
-        }
-    };
-    return axios(commitF)
+    return axios({
+            method: 'get',
+            url: 'https://api.github.com/search/commits?per_page=1&q=author:' + username,
+            headers: {
+                'Accept': 'application/vnd.github.cloak-preview',
+                'Content-Type': 'application/json',
+                "Authorization": "Bearer " + token[Math.floor(Math.random() * 3)]
+            }
+        })
         .then(function(resco) {
             return resco.data.total_count;
         })
@@ -121,16 +115,15 @@ async function Fcommit(username) {
         });
 };
 async function FIssues(username) {
-    var issuesF = {
-        method: 'get',
-        url: 'https://api.github.com/search/issues?per_page=1&q=author:' + username,
-        headers: {
-            'Accept': 'application/vnd.github.cloak-preview',
-            'Content-Type': 'application/json',
-            "Authorization": "Bearer " + token[Math.floor(Math.random() * 3)]
-        }
-    };
-    return axios(issuesF)
+    return axios({
+            method: 'get',
+            url: 'https://api.github.com/search/issues?per_page=1&q=author:' + username,
+            headers: {
+                'Accept': 'application/vnd.github.cloak-preview',
+                'Content-Type': 'application/json',
+                "Authorization": "Bearer " + token[Math.floor(Math.random() * 3)]
+            }
+        })
         .then(function(resis) {
             return resis.data.total_count;
         })
