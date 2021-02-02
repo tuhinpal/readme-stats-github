@@ -7,7 +7,8 @@ async function main(name, pic, repo, stars, commits, forks, tis, cis, text_color
         }
 
         .text {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif;
+            font-weight: 600;
             fill: #${text_color};
             font-size: 14px;
         }
