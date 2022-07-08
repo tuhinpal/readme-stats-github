@@ -26,4 +26,4 @@ const html = `<!DOCTYPE html>
 </html>
 `;
 
-fs.writeFileSync("./public/index.html", html);
+fs.writeFileSync("./src/index.html", html);

@@ -37,7 +37,7 @@
 - Go to [▲ Vercel](https://vercel.com)
 - Connect with your Forked Repo
 - Add your github token in Env Variables. Any variable starts with `GH_TOKEN` will be used randomly.
-- Change root directory to `public`
+- Change root directory to `src`
 - Deploy to fly high!
 
 ## Credits 🙏
