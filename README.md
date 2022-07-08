@@ -31,13 +31,14 @@
 
    [![Example](https://github-stats-alpha.vercel.app/api?username=tuhinpal&cc=000&tc=fff&ic=fff&bc=000 "Example")](https://github-stats-alpha.vercel.app/api?username=tuhinpal&cc=000&tc=fff&ic=fff&bc=000 "Example")
 
-<!-- ## Deploy your own 🦉
+## Deploy your own 🦉
 
 - Fork this Repo
 - Go to [▲ Vercel](https://vercel.com)
 - Connect with your Forked Repo
 - Add your github token in Env Variables. Any variable starts with `GH_TOKEN` will be used randomly.
-- Deploy to fly high! -->
+- Change root directory to `public`
+- Deploy to fly high!
 
 ## Credits 🙏
 
