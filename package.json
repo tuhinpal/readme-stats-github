@@ -12,7 +12,7 @@
   },
   "scripts": {
     "dev": "nodemon ./src/withexpress.ts",
-    "build": "node scripts/createDynamicIndexHtml && tsc",
+    "build": "tsc",
     "start": "node ./dist/withexpress.js"
   },
   "author": "Tuhin Kanti Pal",
