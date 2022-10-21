@@ -22,11 +22,15 @@ export default async function readmeStats(req: any, res: any): Promise<any> {
     if (!username) throw new Error("Username is required");
 
     var fetchStats = await getData(username);
-
-    res.setHeader("Content-Type", "image/svg+xml");
     res.setHeader("Cache-Control", "s-maxage=1800, stale-while-revalidate");
-    let svg = template(fetchStats, uiConfig);
-    res.send(svg);
+
+    if (req.query.format === "json") {
+      res.json(fetchStats);
+    } else {
+      res.setHeader("Content-Type", "image/svg+xml");
+      let svg = template(fetchStats, uiConfig);
+      res.send(svg);
+    }
   } catch (error: any) {
     res.setHeader("Cache-Control", "s-maxage=3600, stale-while-revalidate");
     res.status(500).send(error.message);
