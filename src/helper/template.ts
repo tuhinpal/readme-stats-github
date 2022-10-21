@@ -116,7 +116,7 @@ export default function template(data: GetData, uiConfig: UiConfig): string {
             </g>
 
             <g transform="translate(230, 50)">
-                <g class="singleitem" style="animation-delay: 560ms" transform="translate(25, 0)">
+                <g class="singleitem" style="animation-delay: 460ms" transform="translate(25, 0)">
 
                     <svg class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd"
@@ -129,7 +129,7 @@ export default function template(data: GetData, uiConfig: UiConfig): string {
             </g>
 
             <g transform="translate(230, 75)">
-                <g class="singleitem" style="animation-delay: 460ms" transform="translate(25, 0)">
+                <g class="singleitem" style="animation-delay: 560ms" transform="translate(25, 0)">
 
                     <svg class="icon" viewBox="0 0 16 16" version="1.1" width="16" height="16">
                         <path fill-rule="evenodd"
